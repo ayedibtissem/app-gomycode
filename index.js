@@ -11,7 +11,7 @@ app.use(cors());
 mongoose.connect(process.env.DBURL);
 console.log("db connected");
 app.get("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentiials","true")
+  res.setHeader("Access-Control-Allow-Credentials","true")
   res.send("hello ");
 });
 
