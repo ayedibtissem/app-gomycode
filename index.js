@@ -6,8 +6,8 @@ mongoose.set("strictQuery","true")
 app.use(express.json());
 app.use(cors());
 
-require("dotenv").config();
-console.log(process.env.DBURL);
+//require("dotenv").config();
+//console.log(process.env.DBURL);
 mongoose.connect(process.env.DBURL);
 console.log("db connected");
 app.get("/", (req, res) => {
