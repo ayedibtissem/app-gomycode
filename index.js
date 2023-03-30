@@ -1,13 +1,14 @@
 const express = require("express");
-const app = express();
+const app = express();const mongoose = require("mongoose");
+require("dotenv").config();
 const cors = require("cors");
-const mongoose = require("mongoose");
-mongoose.set("strictQuery","true")
+
+mongoose.set("strictQuery",true)
 app.use(express.json());
 app.use(cors());
 
-//require("dotenv").config();
-//console.log(process.env.DBURL);
+
+
 mongoose.connect(process.env.DBURL);
 console.log("db connected");
 app.get("/", (req, res) => {
