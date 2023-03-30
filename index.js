@@ -9,7 +9,7 @@ app.use(cors());
 
 
 
-mongoose.connect(process.env.DBURL);
+mongoose.connect(process.env.MONGO_URL);
 console.log("db connected");
 app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Credentials","true")
